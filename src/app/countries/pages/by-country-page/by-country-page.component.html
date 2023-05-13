@@ -1,0 +1,21 @@
+<h1>Por País</h1>
+<hr>
+
+<div class="row mb-5">
+  <div class="col">
+    <shared-search-box
+    [initialValue]="initialCountryValue"
+    (wordsToTransfer)="searchCountry($event)" placeholder="Buscar por país"></shared-search-box>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h5>Tabla de resultados:</h5>
+    <hr>
+    <shared-loading-spinner *ngIf="isloading"></shared-loading-spinner>
+
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
+

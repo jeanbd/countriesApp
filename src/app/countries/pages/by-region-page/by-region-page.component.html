@@ -1,0 +1,21 @@
+<h1>Por Region</h1>
+<hr>
+
+<div class="row mb-5">
+  <div class="col">
+    <shared-search-box
+    [initialValue]="initialRegionValue"
+    (wordsToTransfer)="searchRegion($event)" placeholder="Buscar por region"></shared-search-box>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+    <h5>Tabla de resultados:</h5>
+    <hr>
+    <shared-loading-spinner *ngIf="isloading"></shared-loading-spinner>
+
+    <countries-table [countries]="countries"></countries-table>
+  </div>
+</div>
+

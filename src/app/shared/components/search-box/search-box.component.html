@@ -1,0 +1,9 @@
+<!-- (keyup.enter)="onValue()" -->
+<input
+class="form-control"
+type="text"
+[value]="initialValue"
+[placeholder]="placeholder"
+(keyup)="triggerDebounce()"
+#inputSearch
+>
